@@ -11,7 +11,7 @@ var searchData=
   ['centre_5fsc',['centre_sc',['../namespace_imports_1_1definitions.html#a5a0fea6ffe780487fdd4764bad4e2045',1,'Imports::definitions']]],
   ['centre_5fx',['centre_x',['../namespacediscus.html#af21ece23f30e0ab48f5bf71622c4e24f',1,'discus']]],
   ['centre_5fy',['centre_y',['../namespacediscus.html#ab53b683041f518f196feee2edac2b74f',1,'discus']]],
-  ['clock',['clock',['../namespacecross.html#ae4856ed7505742ac4c0a8deb7e4ff9e2',1,'cross.clock()'],['../namespacepipe.html#a19b5997dba819b7a965b8bd38aeaff24',1,'pipe.clock()'],['../namespaceplain.html#aa0ad63899f4826900f1986f9f4bb11e8',1,'plain.clock()'],['../namespaceplain2.html#a35f84682ea25d29f442b64679a65dec6',1,'plain2.clock()'],['../namespacesimple_growth___di_s_c_u_s.html#ad03996637bbf01b4adf449767a8c8ce6',1,'simpleGrowth_DiSCUS.clock()']]],
+  ['clock',['clock',['../namespacecross.html#ae4856ed7505742ac4c0a8deb7e4ff9e2',1,'cross.clock()'],['../namespacepipe.html#a19b5997dba819b7a965b8bd38aeaff24',1,'pipe.clock()'],['../namespaceplain.html#aa0ad63899f4826900f1986f9f4bb11e8',1,'plain.clock()'],['../namespacesimple_growth___di_s_c_u_s.html#ad03996637bbf01b4adf449767a8c8ce6',1,'simpleGrowth_DiSCUS.clock()']]],
   ['color',['color',['../namespace_imports_1_1definitions.html#a6c16418962efec223df8400fef72a433',1,'Imports::definitions']]],
   ['conjugating',['conjugating',['../class_imports_1_1cell__class_1_1bacteria.html#abd277c99229963e02b4de08cd66f224f',1,'Imports::cell_class::bacteria']]]
 ];
