@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hex_5fto_5frgb',['hex_to_rgb',['../namespace_imports_1_1definitions.html#aae86df9c46a95ec27000efe57b6a99d4',1,'Imports::definitions']]]
+  ['get_5fcentres',['get_centres',['../namespace_imports_1_1definitions.html#a2e8cbb3c5d428121b896bb5848c3d4b2',1,'Imports::definitions']]]
 ];

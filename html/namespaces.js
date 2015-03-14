@@ -7,5 +7,6 @@ var namespaces =
     [ "oscillator", "namespaceoscillator.html", null ],
     [ "pipe", "namespacepipe.html", null ],
     [ "plain", "namespaceplain.html", null ],
+    [ "plain2", "namespaceplain2.html", null ],
     [ "simpleGrowth_DiSCUS", "namespacesimple_growth___di_s_c_u_s.html", null ]
 ];
