@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>“Cellmodeller4”: pipe.py Source File</title>
+<title>“Cellmodeller4”: plain2.py Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -85,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('pipe_8py_source.html','');});
+$(document).ready(function(){initNavTree('plain2_8py_source.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('pipe_8py_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">pipe.py</div>  </div>
+<div class="title">plain2.py</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="pipe_8py.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacepipe.html">    1</a></span>&#160;<span class="comment"># ----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># DiSCUS - pipe example file</span></div>
+<a href="plain2_8py.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespaceplain2.html">    1</a></span>&#160;<span class="comment"># ----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># DiSCUS - plain example file</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"># http://code.google.com/p/discus/</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"># Angel Goni-Moreno - www.angelgm.com</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">#</span></div>
@@ -131,68 +131,54 @@ $(document).ready(function(){initNavTree('pipe_8py_source.html','');});
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"># SOFTWARE.</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"># ----------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">##########################################################################</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">### This example simulates one bacterial strain (the recipient strain from</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">### cross.py) growing inside a longitudinal channel.</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">##########################################################################</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">###############################################################################</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">### This exapmle simulates a bacterial strain growing in emtpy space. Thus, the</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">### walls are defined as NONE. As well as the program (genetic circuit = NONE</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">###############################################################################</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">from</span> <a class="code" href="namespace_imports_1_1definitions.html">Imports.definitions</a> <span class="keyword">import</span> *</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">from</span> <a class="code" href="namespace_imports_1_1cell__class.html">Imports.cell_class</a> <span class="keyword">import</span> *</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">from</span> discus <span class="keyword">import</span> *</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="namespacepipe.html#af588345a0df6a07f518619e9069343e9">   36</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespacepipe.html#af588345a0df6a07f518619e9069343e9">add_walls</a>(space):</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">### Fuction used to place the walls in the world (walls scaled depending on screenview)</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">### In: the space</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">### Out: returns the shapes (l) of the walls</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="namespacepipe.html#a2d44f33cf787bf8e2b3c7b89b5fe7732">   40</a></span>&#160;    body = pymunk.Body()</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    body.static = <span class="keyword">True</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    body.position = (0,0.25*screenview/4)    </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="namespacepipe.html#aadec57d0add0af7dcb2915fc73ad388b">   43</a></span>&#160;    l1 = pymunk.Segment(body, (0, 0), (screenview,0), 5.0)</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    body = pymunk.Body()</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    body.position = (0,screenview/4 - 0.25*screenview/4)    </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="namespacepipe.html#a7ea95d63b811f77adcd49591c001d8bc">   46</a></span>&#160;    l2 = pymunk.Segment(body, (0, 0), (screenview,0), 5.0)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    space.add(l1,l2)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> l1,l2</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="namespacepipe.html#a4e42386786e524452254a7e3c83cac8a">   51</a></span>&#160;screenview = 600            <span class="comment">### Scren size</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="namespacepipe.html#a1b9109b0b2f7755f19dbd36c2b1841f4">   52</a></span>&#160;screen = pygame.display.set_mode((screenview, screenview/4))</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="namespacepipe.html#a19b5997dba819b7a965b8bd38aeaff24">   53</a></span>&#160;clock = pygame.time.Clock()</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="namespacepipe.html#a92a6df11b312d070a84ddb28eb92f892">   54</a></span>&#160;space = pymunk.Space()</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="namespacepipe.html#aa902177390385a328797cc603d20c5e3">   55</a></span>&#160;bacs = []</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="namespacepipe.html#a4c6c4548e2dd3325cd2ec618c7008770">   56</a></span>&#160;walls = <a class="code" href="namespacepipe.html#af588345a0df6a07f518619e9069343e9">add_walls</a>(space)</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="namespaceplain2.html#a4b6ae6bbd021df88c9fe2e4de42a20b7">   36</a></span>&#160;screenview = 300            <span class="comment">### Scren size </span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="namespaceplain2.html#a14be9f00c37bffab6d1222ea40972bf5">   37</a></span>&#160;screen = pygame.display.set_mode((screenview, screenview))</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="namespaceplain2.html#a35f84682ea25d29f442b64679a65dec6">   38</a></span>&#160;clock = pygame.time.Clock()</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="namespaceplain2.html#a8102ee310ddc39579f74825195980044">   39</a></span>&#160;space = pymunk.Space()</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="namespaceplain2.html#a1c8ddbf64b9f8609f3e3e4e2ed94f30b">   40</a></span>&#160;bacs = []</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="namespaceplain2.html#a9a91e1e154bd1e6ec2ec16648d54377d">   41</a></span>&#160;walls = <span class="keywordtype">None</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">### Loop for the placement of cells in the world</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(number_recipients):</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="namespaceplain2.html#a92b8cebc59891e89bced61c689fa9857">   45</a></span>&#160;    points = [(0, -width), (0, width), (length,width), (length, -width)]</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="namespaceplain2.html#aa0102cb72d2150391e4bb506c76ebde4">   46</a></span>&#160;    r_y = random.uniform(0, screenview)</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="namespaceplain2.html#a50d1274fbedc1edb0736be222441eedd">   47</a></span>&#160;    r_x = random.uniform(0, screenview)</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="namespaceplain2.html#a5bc46f8a23907ca8603bb4e3336e8ba0">   48</a></span>&#160;    r_angle = random.randint(0,360)</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="namespaceplain2.html#aaa6b92633497c7cd00c740d00de79b77">   49</a></span>&#160;    bac_shape = <a class="code" href="namespace_imports_1_1definitions.html#a6fa6fc3776eb96ee4d3c675b7842e3fa">add_bac</a>(space,r_x,r_y, math.radians(r_angle), points)</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="namespaceplain2.html#af3c1365eecb12f0c5c25c5e5fdd8f8a6">   50</a></span>&#160;    b = <a class="code" href="class_imports_1_1cell__class_1_1bacteria.html">bacteria</a>(bac_shape,<span class="keywordtype">None</span>,[0,0],[bac_shape.body.position.x, bac_shape.body.position.y], 0, <span class="keyword">False</span>, <span class="keyword">False</span>,1,0)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    bacs.append(b)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="namespaceplain2.html#a8b7ea31b77c42d24e910c681b2753782">   53</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespaceplain2.html#a8b7ea31b77c42d24e910c681b2753782">main</a>():</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="namespacediscus.html">discus</a>(screenview, screen, clock, bacs, space, walls)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordflow">if</span> __name__ == <span class="stringliteral">&#39;__main__&#39;</span>:  </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="namespaceplain2.html#a8b7ea31b77c42d24e910c681b2753782">main</a>()</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">### Loop for the placement of recipients in the world</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">### considering the longitudinal shape defined by the definition add_walls</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(number_recipients): <span class="comment"># Placing initial cells in the world</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="namespacepipe.html#a68bb4ffe1d3ff8bbb2b2f149cc7b1897">   61</a></span>&#160;    points = [(0, -width), (0, width), (length,width), (length, -width)]</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="namespacepipe.html#a6a4b986539957d7f7393a7f732040b47">   62</a></span>&#160;    r_x = random.uniform(0, screenview)</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="namespacepipe.html#ae850f418692575a7777152e5a6e74224">   63</a></span>&#160;    r_y = random.uniform(0.35*screenview/4, screenview/4 - 0.35*screenview/4)</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="namespacepipe.html#abc5efd9ec806b9bb72d89e33629fa6c6">   64</a></span>&#160;    r_angle = random.randint(0,360)</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="namespacepipe.html#a783f6c426469ef2c5c780731b97c73df">   65</a></span>&#160;    bac_shape = <a class="code" href="namespace_imports_1_1definitions.html#a6fa6fc3776eb96ee4d3c675b7842e3fa">add_bac</a>(space,r_x,r_y, math.radians(r_angle), points)</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="namespacepipe.html#a1f0c47c9f134760e8e56c9de14569c45">   66</a></span>&#160;    b = <a class="code" href="class_imports_1_1cell__class_1_1bacteria.html">bacteria</a>(bac_shape,[0,0],[0,0],[bac_shape.body.position.x, bac_shape.body.position.y], 0, <span class="keyword">False</span>, <span class="keyword">False</span>,1,0)</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    bacs.append(b)</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="namespacepipe.html#aad88b7b3121a29c785dbd8dd84b8f2d5">   70</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespacepipe.html#aad88b7b3121a29c785dbd8dd84b8f2d5">main</a>():</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="namespacediscus.html">discus</a>(screenview, screen, clock, bacs, space, walls)</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordflow">if</span> __name__ == <span class="stringliteral">&#39;__main__&#39;</span>:  </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="namespacepipe.html#aad88b7b3121a29c785dbd8dd84b8f2d5">main</a>()</div>
-<div class="ttc" id="namespacepipe_html_af588345a0df6a07f518619e9069343e9"><div class="ttname"><a href="namespacepipe.html#af588345a0df6a07f518619e9069343e9">pipe.add_walls</a></div><div class="ttdeci">def add_walls(space)</div><div class="ttdef"><b>Definition:</b> <a href="pipe_8py_source.html#l00036">pipe.py:36</a></div></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="namespaceplain2.html#a34ab5c7ec578b90bee16ac808c1ab779">   58</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespaceplain2.html#a34ab5c7ec578b90bee16ac808c1ab779">eatapples</a>():</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">print</span> <span class="stringliteral">&quot;eat apple&quot;</span></div>
 <div class="ttc" id="class_imports_1_1cell__class_1_1bacteria_html"><div class="ttname"><a href="class_imports_1_1cell__class_1_1bacteria.html">Imports.cell_class.bacteria</a></div><div class="ttdef"><b>Definition:</b> <a href="cell__class_8py_source.html#l00025">cell_class.py:25</a></div></div>
 <div class="ttc" id="namespace_imports_1_1cell__class_html"><div class="ttname"><a href="namespace_imports_1_1cell__class.html">Imports.cell_class</a></div><div class="ttdef"><b>Definition:</b> <a href="cell__class_8py_source.html#l00001">cell_class.py:1</a></div></div>
 <div class="ttc" id="namespacediscus_html"><div class="ttname"><a href="namespacediscus.html">discus</a></div><div class="ttdef"><b>Definition:</b> <a href="discus_8py_source.html#l00001">discus.py:1</a></div></div>
-<div class="ttc" id="namespacepipe_html_aad88b7b3121a29c785dbd8dd84b8f2d5"><div class="ttname"><a href="namespacepipe.html#aad88b7b3121a29c785dbd8dd84b8f2d5">pipe.main</a></div><div class="ttdeci">def main()</div><div class="ttdef"><b>Definition:</b> <a href="pipe_8py_source.html#l00070">pipe.py:70</a></div></div>
 <div class="ttc" id="namespace_imports_1_1definitions_html"><div class="ttname"><a href="namespace_imports_1_1definitions.html">Imports.definitions</a></div><div class="ttdef"><b>Definition:</b> <a href="definitions_8py_source.html#l00001">definitions.py:1</a></div></div>
 <div class="ttc" id="namespace_imports_1_1definitions_html_a6fa6fc3776eb96ee4d3c675b7842e3fa"><div class="ttname"><a href="namespace_imports_1_1definitions.html#a6fa6fc3776eb96ee4d3c675b7842e3fa">Imports.definitions.add_bac</a></div><div class="ttdeci">def add_bac(space, x, y, angle, points)</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8py_source.html#l00032">definitions.py:32</a></div></div>
+<div class="ttc" id="namespaceplain2_html_a34ab5c7ec578b90bee16ac808c1ab779"><div class="ttname"><a href="namespaceplain2.html#a34ab5c7ec578b90bee16ac808c1ab779">plain2.eatapples</a></div><div class="ttdeci">def eatapples()</div><div class="ttdef"><b>Definition:</b> <a href="plain2_8py_source.html#l00058">plain2.py:58</a></div></div>
+<div class="ttc" id="namespaceplain2_html_a8b7ea31b77c42d24e910c681b2753782"><div class="ttname"><a href="namespaceplain2.html#a8b7ea31b77c42d24e910c681b2753782">plain2.main</a></div><div class="ttdeci">def main()</div><div class="ttdef"><b>Definition:</b> <a href="plain2_8py_source.html#l00053">plain2.py:53</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="pipe_8py.html">pipe.py</a></li>
+    <li class="navelem"><a class="el" href="plain2_8py.html">plain2.py</a></li>
     <li class="footer">Generated on Sat Mar 14 2015 17:05:58 for “Cellmodeller4” by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
