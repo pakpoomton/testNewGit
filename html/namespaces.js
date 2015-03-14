@@ -2,6 +2,7 @@ var namespaces =
 [
     [ "cross", "namespacecross.html", null ],
     [ "discus", "namespacediscus.html", null ],
+    [ "doxmain", "namespacedoxmain.html", null ],
     [ "Imports", "namespace_imports.html", "namespace_imports" ],
     [ "oscillator", "namespaceoscillator.html", null ],
     [ "pipe", "namespacepipe.html", null ],
